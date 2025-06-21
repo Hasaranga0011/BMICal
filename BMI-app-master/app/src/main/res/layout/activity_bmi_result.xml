@@ -7,6 +7,8 @@
     android:gravity="center_horizontal"
     android:background="#FAFAFA">
 
+
+
     <TextView
         android:id="@+id/tvBmiValue"
         android:layout_width="wrap_content"

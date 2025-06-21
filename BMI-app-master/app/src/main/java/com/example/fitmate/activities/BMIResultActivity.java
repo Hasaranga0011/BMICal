@@ -22,24 +22,31 @@ public class BMIResultActivity extends AppCompatActivity {
         btnMealPlans = findViewById(R.id.btnMealPlans);
         btnExercisePlans = findViewById(R.id.btnExercisePlans);
 
-        // Get BMI value and status from intent
         float bmi = getIntent().getFloatExtra("BMI_VALUE", 0f);
-        String status = getIntent().getStringExtra("BMI_STATUS");
+        String status;
 
-        // Display them
+        if (bmi < 18.5f) {
+            status = "Underweight";
+        } else if (bmi < 25f) {
+            status = "Normal";
+        } else if (bmi < 30f) {
+            status = "Overweight";
+        } else {
+            status = "Obese";
+        }
+
         tvBmiValue.setText(String.format("Your BMI: %.2f", bmi));
         tvBmiStatus.setText("Status: " + status);
 
-        // Button click listeners
         btnMealPlans.setOnClickListener(v -> {
-            // TODO: Replace with your actual MealPlansActivity class
             Intent intent = new Intent(BMIResultActivity.this, MealPlansActivity.class);
+            intent.putExtra("BMI_STATUS", status);
             startActivity(intent);
         });
 
         btnExercisePlans.setOnClickListener(v -> {
-            // TODO: Replace with your actual ExercisePlansActivity class
             Intent intent = new Intent(BMIResultActivity.this, ExercisePlansActivity.class);
+            intent.putExtra("BMI_STATUS", status);
             startActivity(intent);
         });
     }

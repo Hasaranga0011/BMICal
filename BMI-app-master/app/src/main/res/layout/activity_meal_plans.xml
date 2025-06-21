@@ -17,10 +17,13 @@
             android:textStyle="bold"
             android:layout_marginBottom="16dp" />
 
+
         <TextView
+            android:id="@+id/tvMealPlan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="• Breakfast: Oats + Fruits\n• Lunch: Rice + Veggies + Chicken\n• Dinner: Soup + Salad"
+            android:text="Meal plan will appear here"
             android:textSize="16sp" />
+
     </LinearLayout>
 </ScrollView>

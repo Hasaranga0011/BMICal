@@ -17,10 +17,13 @@
             android:textStyle="bold"
             android:layout_marginBottom="16dp" />
 
+
         <TextView
+            android:id="@+id/tvExercisePlan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="• Morning walk - 30 mins\n• Push-ups - 3 sets\n• Squats - 3 sets\n• Yoga - 20 mins"
+            android:text="Exercise plan will appear here"
             android:textSize="16sp" />
+
     </LinearLayout>
 </ScrollView>
